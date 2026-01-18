@@ -1,0 +1,117 @@
+:root {
+    --bg-light: #f4f4f5;
+    --text-light: #18181b;
+    --bg-dark: #111111;
+    --text-dark: #e4e4e7;
+    --accent: #3b82f6;
+    --border-light: #e4e4e7;
+    --border-dark: #27272a;
+    --bg-secondary-light: #ffffff;
+    --bg-secondary-dark: #18181b;
+}
+
+html { scroll-behavior: smooth; }
+html.light {
+    --bg-primary: var(--bg-light);
+    --bg-secondary: var(--bg-secondary-light);
+    --text-primary: var(--text-light);
+    --border-color: var(--border-light);
+}
+html.dark {
+    --bg-primary: var(--bg-dark);
+    --bg-secondary: var(--bg-secondary-dark);
+    --text-primary: var(--text-dark);
+    --border-color: var(--border-dark);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background-color: var(--accent);
+    width: 0%;
+    z-index: 100;
+    transition: width 0.1s linear;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background-color: var(--accent);
+}
+
+/* Typing effect */
+.typing-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    background-color: var(--accent);
+    animation: blink 0.7s infinite;
+    margin-left: 4px;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Staggered reveal animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s, transform 0.8s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Timeline */
+.timeline-item {
+    position: relative;
+    padding-left: 2.5rem;
+    padding-bottom: 2rem;
+    border-left: 2px solid var(--border-color);
+}
+.timeline-item:last-child {
+    border-left: 2px solid transparent;
+}
+.timeline-dot {
+    position: absolute;
+    left: -9px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--accent);
+}
+
+/* Skill Network */
+.skill-node {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.skill-node:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+.active-nav-link {
+    color: var(--accent) !important;
+}
