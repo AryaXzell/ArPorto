@@ -5,147 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AryaXzell | Creative Developer</title>
     
-    <!-- SEO Meta Tags -->
     <meta name="description" content="Portofolio personal dari Nama Anda, seorang Creative Developer & UI/UX Enthusiast yang bersemangat dalam membangun antarmuka digital yang modern dan intuitif.">
     <meta name="keywords" content="web developer, front-end developer, ui/ux designer, portfolio, javascript, react, personal website">
     
-    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Arya | Creative Developer">
     <meta property="og:description" content="Mengubah ide kompleks menjadi pengalaman digital yang elegan dan fungsional.">
     <meta property="og:image" content="https://placehold.co/1200x630/111111/3b82f6?text=Portofolio+Saya">
-    <meta property="og:url" content="#"> <!-- Ganti dengan URL domain Anda nanti -->
+    <meta property="og:url" content="#">
     <meta property="og:type" content="website">
 
-    <!-- Favicon (SVG) -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <style>
-        :root {
-            --bg-light: #f4f4f5;
-            --text-light: #18181b;
-            --bg-dark: #111111;
-            --text-dark: #e4e4e7;
-            --accent: #3b82f6;
-            --border-light: #e4e4e7;
-            --border-dark: #27272a;
-            --bg-secondary-light: #ffffff;
-            --bg-secondary-dark: #18181b;
-        }
-
-        html { scroll-behavior: smooth; }
-        html.light {
-            --bg-primary: var(--bg-light);
-            --bg-secondary: var(--bg-secondary-light);
-            --text-primary: var(--text-light);
-            --border-color: var(--border-light);
-        }
-        html.dark {
-            --bg-primary: var(--bg-dark);
-            --bg-secondary: var(--bg-secondary-dark);
-            --text-primary: var(--text-dark);
-            --border-color: var(--border-dark);
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        #scroll-progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 3px;
-            background-color: var(--accent);
-            width: 0%;
-            z-index: 100;
-            transition: width 0.1s linear;
-        }
-
-        .section-title {
-            position: relative;
-            display: inline-block;
-            padding-bottom: 0.5rem;
-            margin-bottom: 2rem;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50%;
-            height: 3px;
-            background-color: var(--accent);
-        }
-
-        /* Typing effect */
-        .typing-cursor {
-            display: inline-block;
-            width: 3px;
-            height: 1em;
-            background-color: var(--accent);
-            animation: blink 0.7s infinite;
-            margin-left: 4px;
-        }
-        @keyframes blink { 50% { opacity: 0; } }
-
-        /* Staggered reveal animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s, transform 0.8s;
-            transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Timeline */
-        .timeline-item {
-            position: relative;
-            padding-left: 2.5rem;
-            padding-bottom: 2rem;
-            border-left: 2px solid var(--border-color);
-        }
-        .timeline-item:last-child {
-            border-left: 2px solid transparent;
-        }
-        .timeline-dot {
-            position: absolute;
-            left: -9px;
-            top: 4px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background-color: var(--accent);
-        }
-
-        /* Skill Network */
-        .skill-node {
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .skill-node:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
-        }
-        
-        .active-nav-link {
-            color: var(--accent) !important;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="antialiased">
     <div id="scroll-progress-bar"></div>
 
-    <!-- Header & Navigasi -->
     <header class="sticky top-0 z-50 bg-opacity-80 backdrop-blur-md border-b border-transparent" id="navbar">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home" class="text-xl font-bold tracking-tight">AryaXzell</a>
@@ -168,7 +46,6 @@
         </nav>
     </header>
 
-    <!-- Menu Mobile -->
     <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-opacity-95 backdrop-blur-sm z-40 flex-col items-center justify-center space-y-8 text-2xl hidden md:hidden">
         <a href="#about" class="nav-link-mobile">Tentang</a>
         <a href="#skills" class="nav-link-mobile">Keahlian</a>
@@ -178,7 +55,6 @@
     </div>
 
     <main class="container mx-auto px-6">
-        <!-- Hero Section -->
         <section id="home" class="min-h-screen flex items-center">
             <div class="w-full text-center md:text-left">
                 <p class="text-lg text-blue-500 mb-2 reveal">Halo, saya</p>
@@ -193,14 +69,13 @@
             </div>
         </section>
 
-        <!-- About Section -->
         <section id="about" class="py-20">
             <h2 class="section-title text-3xl font-bold reveal">Tentang Saya</h2>
             <div class="grid md:grid-cols-5 gap-10 items-center">
                 <div class="md:col-span-3 text-gray-400 space-y-4 reveal">
-                    <p>gue arya, anak tkj yang ga masuk tkj, gw yang sehari-harinya gak jauh dari hp, jaringan, dan server. dari pertama kenal dunia it gue langsung kepo sama gimana cara sebuah sistem bisa nyambung satu sama lain. makanya gue sering banget ngulik router, mainin setting dns, coba port vpn, sampe bikin server kecil-kecilan di rumah buat tempat belajar. walaupun server gue cuma 1gb ram, tapi dari situ gue bisa latihan instalasi os, konfigurasi service, sampe simulasi jaringan sederhana.</p>
-                    <p>gue juga terbiasa troubleshooting kalau jaringan lagi bermasalah, entah itu wifi lemot, ping tinggi pas main game, atau ada setting yang bikin koneksi gak stabil. biasanya gue tes berbagai cara, mulai dari ganti dns, cek routing, sampai coba protokol udp biar lebih ringan. buat gue, tiap masalah itu kaya puzzle—semakin ribet, semakin seru buat dipecahin. selain fokus di jaringan, gue juga ngerti dasar-dasar web. gue bisa bikin website simple pake html, css, sama javascript, dan suka nyoba bikin tampilan yang rapi biar nyaman dilihat. walaupun belum expert, gue selalu belajar sedikit demi sedikit, karena menurut gue teknologi itu gak ada habisnya buat dieksplor.</p>
-                    <p>yang paling penting, gue bukan cuma pake teknologi, tapi pengen ngerti cara kerjanya. itu kenapa gue selalu penasaran sama hal kecil—kenapa ping bisa naik turun, kenapa server bisa down, atau kenapa setting tertentu bikin koneksi lebih stabil. rasa kepo itu yang bikin gue terus belajar dan gak gampang puas. tujuan gue jelas: upgrade skill, jadi orang yang bisa diandalkan, dan bikin sistem yang bukan cuma jalan, tapi stabil dan efisien.</p>
+                    <p>gue arya, anak tkj yang ga masuk tkj, gw yang sehari-harinya gak jauh dari hp, jaringan, dan server...</p>
+                    <p>gue juga terbiasa troubleshooting...</p>
+                    <p>yang paling penting, gue bukan cuma pake teknologi...</p>
                 </div>
                 <div class="md:col-span-2 flex justify-center reveal" style="transition-delay: 0.2s;">
                     <img loading="lazy" src="https://owivtazpjnkbncfwmitk.supabase.co/storage/v1/object/public/media/a6dd3383-af16-4410-9f3c-f6ab55908afa.jpg" alt="it's me jir 🤭" class="rounded-lg shadow-xl w-64 h-64 md:w-80 md:h-80 object-cover">
@@ -208,249 +83,16 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="py-20">
-            <h2 class="section-title text-3xl font-bold reveal">Keahlian</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-center reveal">
-                <div class="skill-node p-6 rounded-lg">
-                    <img loading="lazy" src="https://placehold.co/64x64/18181b/ffffff?text=JS" class="mx-auto mb-2"/> JavaScript (ES6+)
-                </div>
-                <div class="skill-node p-6 rounded-lg">
-                    <img loading="lazy" src="https://placehold.co/64x64/18181b/ffffff?text=R" class="mx-auto mb-2"/> React.js
-                </div>
-                <div class="skill-node p-6 rounded-lg">
-                    <img loading="lazy" src="https://placehold.co/64x64/18181b/ffffff?text=N" class="mx-auto mb-2"/> Node.js
-                </div>
-                <div class="skill-node p-6 rounded-lg">
-                    <img loading="lazy" src="https://placehold.co/64x64/18181b/ffffff?text=T" class="mx-auto mb-2"/> Tailwind CSS
-                </div>
-                 <div class="skill-node p-6 rounded-lg">
-                    <img loading="lazy" src="https://placehold.co/64x64/18181b/ffffff?text=F" class="mx-auto mb-2"/> Figma
-                </div>
-                 <div class="skill-node p-6 rounded-lg">
-                    <img loading="lazy" src="https://placehold.co/64x64/18181b/ffffff?text=Py" class="mx-auto mb-2"/> Python
-                </div>
-                 <div class="skill-node p-6 rounded-lg">
-                    <img loading="lazy" src="https://placehold.co/64x64/18181b/ffffff?text=DB" class="mx-auto mb-2"/> SQL & NoSQL
-                </div>
-                 <div class="skill-node p-6 rounded-lg">
-                    <img loading="lazy" src="https://placehold.co/64x64/18181b/ffffff?text=API" class="mx-auto mb-2"/> REST APIs
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="py-20">
-            <h2 class="section-title text-3xl font-bold reveal">Pengalaman</h2>
-            <div class="reveal">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="mb-1 text-sm text-gray-400">2022 - Now</div>
-                    <h3 class="text-xl font-semibold">Front-end Developer di Perusahaan Meta Inc.</h3>
-                    <p class="text-gray-500">Mengembangkan dan memelihara antarmuka pengguna untuk berbagai produk, berkolaborasi dengan tim desain dan back-end.</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="mb-1 text-sm text-gray-400">2020 - Now</div>
-                    <h3 class="text-xl font-semibold">Junior Web Developer</h3>
-                    <p class="text-gray-500">Membantu dalam pengembangan website klien, mulai dari slicing desain hingga implementasi fitur interaktif.</p>
-                </div>
-                <div class="timeline-item">
-                     <div class="timeline-dot"></div>
-                    <div class="mb-1 text-sm text-gray-400">2022 - Now</div>
-                    <h3 class="text-xl font-semibold">SEKOLAH DI MA. ROUDHOTUL HIKMAH</h3>
-                    <p class="text-gray-500">Mempelajari dasar-dasar ilmu komputer, algoritma, dan pengembangan perangkat lunak.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="py-20">
-            <h2 class="section-title text-3xl font-bold reveal">Portofolio</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="bg-secondary rounded-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 reveal">
-                    <div class="overflow-hidden"><img loading="lazy" src="https://owivtazpjnkbncfwmitk.supabase.co/storage/v1/object/public/media/feb7d688-82bf-462e-b870-2cec7d57494a.jpg" alt="Preview Image" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">LYNK ME</h3>
-                        <p class="text-gray-400 text-sm mb-4">project pertama saya ialah membuat website yang mengarah ke all sosmed yang saya miliki dan ini pencapaian pertama saya dalam membuat website</p>
-                        <a href="#" class="text-blue-500 hover:text-blue-400 font-semibold">KEMBALI KE ATAS &rarr;</a>
-                    </div>
-                </div>
-                <!-- Project 2 -->
-                <div class="bg-secondary rounded-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 reveal" style="transition-delay: 0.2s;">
-                     <div class="overflow-hidden"><img loading="lazy" src="https://owivtazpjnkbncfwmitk.supabase.co/storage/v1/object/public/media/21a7c1c3-fdbf-4369-8c07-c562137b8264.jpg" alt="Preview Image" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"></div>
-                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">ARYTUNES</h3>
-                        <p class="text-gray-400 text-sm mb-4">project kedua saya ialah membuat website streaming musik, yang isinya paling musik favorit saya, saya membuat ini lantaran kesal karna adanya iklan di pemutar musik lain seperti Spotify, alhasil dari kekesalan itu lahirlah ide saya dalam membuat website streaming musik</p>
-                        <a href="#" class="text-blue-500 hover:text-blue-400 font-semibold">KEMBALI KE ATAS &rarr;</a>
-                    </div>
-                </div>
-                <!-- Project 3 -->
-                <div class="bg-secondary rounded-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 reveal" style="transition-delay: 0.4s;">
-                     <div class="overflow-hidden"><img loading="lazy" src="https://owivtazpjnkbncfwmitk.supabase.co/storage/v1/object/public/media/65b215df-001b-4717-932f-71e57b4258f9.jpg" alt="Proyek 3" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"></div>
-                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">LINGOFLOW</h3>
-                        <p class="text-gray-400 text-sm mb-4">Penerjemah yang anti kaku!</p>
-                        <a href="#" class="text-blue-500 hover:text-blue-400 font-semibold">KEMBALI KE ATAS &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 text-center">
-             <h2 class="section-title text-3xl font-bold reveal">Hubungi Saya</h2>
-             <p class="max-w-xl mx-auto text-gray-400 mb-8 reveal" style="transition-delay: 0.1s;">Saya selalu terbuka untuk diskusi, kolaborasi, atau sekadar menyapa. Jangan ragu untuk menghubungi saya!</p>
-             <div class="space-y-4 md:space-y-0 md:space-x-4 reveal" style="transition-delay: 0.2s;">
-                <a href="mailto:aryaxzell@protonmail.com" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1 inline-block">
-                    Kirim Email
-                </a>
-                 <a href="https://files.catbox.moe/me3l2b.jpg" download class="border border-blue-600 text-blue-500 font-semibold py-3 px-8 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 inline-block">
-                    Unduh CV
-                </a>
-             </div>
-        </section>
-    </main>
+        </main>
 
     <footer class="py-8 border-t border-border-color">
         <div class="container mx-auto px-6 text-center text-gray-500">
             <div class="flex justify-center space-x-6 mb-4">
-                 <a href="#" class="hover:text-blue-500 transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.286 2.866 7.92 6.736 9.214.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.577.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg></a>
-                 <a href="#" class="hover:text-blue-500 transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.206v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.337 7.433c-.017-1.024.816-1.846 1.846-1.846.995 0 1.813.822 1.813 1.846s-.818 1.846-1.813 1.846c-1.03 0-1.846-.822-1.846-1.846zM6.613 16.338H4.068v-8.59h2.546v8.59zM17.638 2H6.362A4.362 4.362 0 002 6.362v11.276A4.362 4.362 0 006.362 22h11.276A4.362 4.362 0 0022 17.638V6.362A4.362 4.362 0 0017.638 2z" clip-rule="evenodd" /></svg></a>
-            </div>
+                 </div>
             <p>&copy; 2025 AryaXzell Cihuyy</p>
         </div>
     </footer>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-
-    // --- Theme Toggler ---
-    const themeToggle = document.getElementById('theme-toggle');
-    const lightIcon = document.getElementById('theme-icon-light');
-    const darkIcon = document.getElementById('theme-icon-dark');
-
-    const applyTheme = (theme) => {
-        if (theme === 'dark') {
-            document.documentElement.classList.add('dark');
-            document.documentElement.classList.remove('light');
-            lightIcon.classList.add('hidden');
-            darkIcon.classList.remove('hidden');
-        } else {
-            document.documentElement.classList.add('light');
-            document.documentElement.classList.remove('dark');
-            darkIcon.classList.add('hidden');
-            lightIcon.classList.remove('hidden');
-        }
-    };
-
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    applyTheme(savedTheme);
-
-    themeToggle.addEventListener('click', () => {
-        const newTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
-        localStorage.setItem('theme', newTheme);
-        applyTheme(newTheme);
-    });
-
-    // --- Typing Effect ---
-    const typingText = document.getElementById('typing-text');
-    const roles = ["Creative Developer.", "UI/UX Enthusiast.", "Problem Solver."];
-    let roleIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-
-    function type() {
-        const currentRole = roles[roleIndex];
-        if (isDeleting) {
-            typingText.textContent = currentRole.substring(0, charIndex--);
-        } else {
-            typingText.textContent = currentRole.substring(0, charIndex++);
-        }
-
-        if (!isDeleting && charIndex === currentRole.length) {
-            setTimeout(() => isDeleting = true, 2000);
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-        }
-
-        const typeSpeed = isDeleting ? 75 : 150;
-        setTimeout(type, typeSpeed);
-    }
-    type();
-
-    // --- Staggered Reveal on Scroll ---
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    
-    // --- Scroll Progress Bar & Active Nav Link ---
-    const progressBar = document.getElementById('scroll-progress-bar');
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const navbar = document.getElementById('navbar');
-
-    function updateScroll() {
-        // Progress bar logic
-        const scrollTotal = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = document.documentElement.scrollTop;
-        const progress = (scrolled / scrollTotal) * 100;
-        progressBar.style.width = `${progress}%`;
-
-        // Navbar shadow on scroll
-        if (scrolled > 50) {
-            navbar.style.borderColor = 'var(--border-color)';
-        } else {
-            navbar.style.borderColor = 'transparent';
-        }
-        
-        // Active nav link logic
-        let currentSectionId = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100; // offset for navbar height
-            if (scrolled >= sectionTop) {
-                currentSectionId = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active-nav-link');
-            if(link.getAttribute('href') === `#${currentSectionId}`) {
-                link.classList.add('active-nav-link');
-            }
-        });
-    }
-    
-    window.addEventListener('scroll', updateScroll);
-
-    // --- Mobile Menu ---
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileLinks = document.querySelectorAll('.nav-link-mobile');
-
-    menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        mobileMenu.classList.toggle('flex');
-    });
-
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            mobileMenu.classList.remove('flex');
-        });
-    });
-
-});
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
-
