@@ -73,20 +73,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.getElementById('navbar');
 
     function updateScroll() {
+        // Progress bar logic
         const scrollTotal = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrolled = document.documentElement.scrollTop;
         const progress = (scrolled / scrollTotal) * 100;
         progressBar.style.width = `${progress}%`;
 
+        // Navbar shadow on scroll
         if (scrolled > 50) {
             navbar.style.borderColor = 'var(--border-color)';
         } else {
             navbar.style.borderColor = 'transparent';
         }
         
+        // Active nav link logic
         let currentSectionId = '';
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
+            const sectionTop = section.offsetTop - 100; // offset for navbar height
             if (scrolled >= sectionTop) {
                 currentSectionId = section.getAttribute('id');
             }
@@ -118,4 +121,5 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenu.classList.remove('flex');
         });
     });
+
 });
